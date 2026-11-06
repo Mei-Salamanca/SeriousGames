@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Meilen Salamanca | Serious Games </title>
+  <title>Meilen Salamanca | Serious Games Lab</title>
   
   <!-- Fuentes Pixel Art de Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,6 +18,7 @@
       --accent-purple: #bd93f9;
       --accent-pink: #ff79c6;
       --accent-yellow: #f1fa8c;
+      --accent-cyan: #8be9fd;
       --text-color: #f8f8f2;
       --border-black: #000000;
     }
@@ -84,12 +85,16 @@
       box-shadow: 3px 3px 0px 0px var(--border-black);
     }
 
+    .nav-btn.profile-btn {
+      background-color: var(--accent-cyan);
+    }
+
     .nav-btn:hover {
       transform: translate(2px, 2px);
       box-shadow: 1px 1px 0px 0px var(--border-black);
     }
 
-    /* Grid de Proyectos */
+    /* Grid y Contenedores */
     .projects-container {
       max-width: 900px;
       width: 100%;
@@ -98,6 +103,55 @@
       gap: 40px;
     }
 
+    /* Tarjeta de Ficha de Personaje / About Me */
+    .about-card {
+      background-color: var(--card-bg);
+      border: 4px solid var(--border-black);
+      box-shadow: 8px 8px 0px 0px var(--accent-cyan);
+      padding: 25px;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      gap: 25px;
+      align-items: start;
+    }
+
+    @media (max-width: 768px) {
+      .about-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .avatar-frame {
+      border: 3px solid var(--border-black);
+      box-shadow: 4px 4px 0px 0px var(--accent-purple);
+      background-color: #000;
+      padding: 5px;
+      text-align: center;
+    }
+
+    .avatar-frame img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .stats-box {
+      background-color: #12131C;
+      border: 2px dashed var(--accent-purple);
+      padding: 12px;
+      margin-top: 15px;
+      font-size: 18px;
+    }
+
+    .stats-box span {
+      color: var(--accent-green);
+    }
+
+    /* Tarjetas de Proyectos */
     .project-card {
       background-color: var(--card-bg);
       border: 4px solid var(--border-black);
@@ -105,7 +159,7 @@
       padding: 25px;
     }
 
-    .project-title {
+    .section-title {
       font-family: 'Press Start 2P', cursive;
       font-size: 15px;
       color: var(--accent-yellow);
@@ -145,10 +199,9 @@
       display: block;
     }
 
-    /* Contenedor responsivo para videos de YouTube/Vimeo */
     .video-container {
       position: relative;
-      padding-bottom: 56.25%; /* Relación de aspecto 16:9 */
+      padding-bottom: 56.25%;
       height: 0;
       overflow: hidden;
       width: 100%;
@@ -192,13 +245,20 @@
       font-weight: bold;
     }
 
-    .articles-list a {
+    .articles-list a, .social-links a {
       color: var(--accent-purple);
       text-decoration: underline;
     }
 
-    .articles-list a:hover {
+    .articles-list a:hover, .social-links a:hover {
       color: var(--accent-yellow);
+    }
+
+    .social-links {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+      margin-top: 15px;
     }
   </style>
 </head>
@@ -210,6 +270,7 @@
     <p class="subtitle">> Tech Divulgation & Motor-Cognitive Projects</p>
     
     <nav class="nav-projects">
+      <a href="#about-me" class="nav-btn profile-btn">PLAYER PROFILE</a>
       <a href="#proj-1" class="nav-btn">PROJECT 01</a>
       <a href="#proj-2" class="nav-btn">PROJECT 02</a>
       <a href="#proj-3" class="nav-btn">PROJECT 03</a>
@@ -218,20 +279,60 @@
     </nav>
   </header>
 
-  <!-- Lista de 5 Proyectos -->
   <main class="projects-container">
+
+    <!-- SECCIÓN ABOUT ME (Ficha de Personaje) -->
+    <section id="about-me" class="about-card">
+      <h2 class="section-title" style="color: var(--accent-cyan);">PLAYER SELECT: ABOUT ME</h2>
+      
+      <div class="about-grid">
+        <!-- Foto / Avatar Pixel Art -->
+        <div class="avatar-frame">
+          <img src="foto-perfil.png" alt="Meilen Salamanca Profile">
+          
+          <div class="stats-box">
+            <div>CLASS: <span>Bioengineer</span></div>
+            <div>ROLE: <span>Researcher / PhD</span></div>
+            <div>SPEC: <span>Serious Games & HCI</span></div>
+          </div>
+        </div>
+
+        <!-- Biografía / Resumen de Investigación -->
+        <div>
+          <div class="description-title">> RESEARCH SUMMARY</div>
+          <p>
+            ¡Hola! Soy <strong>Meilen Salamanca</strong>, Bioingeniera e Investigadora especializada en 
+            <strong>Engenharia de Reabilitação, Serious Games y Human-Computer Interaction (HCI)</strong>.
+          </p>
+          <p>
+            Mi trabajo se enfoca en el desarrollo y evaluación de entornos virtuales adaptativos, interfaces motor-cognitivas (VR, treadmills, sensores de movimiento) y arquitecturas de Ajuste Dinámico de Dificultad (DDA) orientadas a la rehabilitación y salud digital de adultos mayores.
+          </p>
+
+          <div class="description-title">> SKILLS & INVENTORY</div>
+          <p>
+            • <strong>Tech:</strong> C++, Unity (C#), OpenGL, ROS2, Python (Pandas, OpenCV, MediaPipe)<br>
+            • <strong>Hardware:</strong> Kinect V2, SmartTreadmills, Virtual Reality (Stereoscopic/Headsets), Haptic Gloves
+          </p>
+
+          <div class="description-title">> CONNECT / EXTERNAL LINKS</div>
+          <div class="social-links">
+            <a href="https://github.com/mei-salamanca" target="_blank">[GitHub]</a>
+            <a href="https://orcid.org/" target="_blank">[ORCID]</a>
+            <a href="https://lattes.cnpq.br/" target="_blank">[Currículo Lattes]</a>
+            <a href="mailto:tu-email@dominio.com">[Contact Email]</a>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- PROYECTO 1 -->
     <section id="proj-1" class="project-card">
       <h2 class="project-title">LEVEL 01: Adaptive Dual-Task Exergame</h2>
       
       <div class="media-grid">
-        <!-- Imagen del Proyecto 1 -->
         <div class="pixel-frame">
           <img src="proyecto1.png" alt="Vista previa del Proyecto 1">
         </div>
-        
-        <!-- Video del Proyecto 1 (Reemplaza el src con tu enlace de YouTube Embed o video .mp4) -->
         <div class="pixel-frame">
           <div class="video-container">
             <iframe src="https://www.youtube.com/embed/VIDEO_ID_AQUI" allowfullscreen></iframe>
