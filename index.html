@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Meilen Salamanca | Serious Games Lab</title>
   
-  <!-- Fuentes Pixel Art de Google Fonts -->
+  <!-- Google Pixel Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
@@ -32,57 +32,60 @@
       background-color: var(--bg-color);
       color: var(--text-color);
       font-family: 'VT323', monospace;
-      font-size: 22px;
+      font-size: 24px;
       margin: 0;
-      padding: 30px 15px;
+      padding: 20px 40px;
       display: flex;
       flex-direction: column;
       align-items: center;
+      width: 100%;
+      min-height: 100vh;
     }
 
+    /* Full Screen Width Header Box */
     .header-box {
       background-color: var(--card-bg);
-      max-width: 900px;
       width: 100%;
-      padding: 25px;
+      max-width: 1400px;
+      padding: 30px;
       border: 4px solid var(--border-black);
-      box-shadow: 6px 6px 0px 0px var(--accent-purple);
+      box-shadow: 8px 8px 0px 0px var(--accent-purple);
       margin-bottom: 30px;
       text-align: center;
     }
 
     h1 {
       font-family: 'Press Start 2P', cursive;
-      font-size: 20px;
+      font-size: 24px;
       color: var(--accent-green);
       text-shadow: 3px 3px 0px var(--border-black);
-      margin: 0 0 10px 0;
+      margin: 0 0 15px 0;
     }
 
     .subtitle {
-      font-size: 24px;
+      font-size: 26px;
       color: var(--accent-pink);
       margin: 0;
     }
 
-    /* Navegación rápida tipo selección de nivel */
+    /* Level Selector Navigation Bar */
     .nav-projects {
       display: flex;
       flex-wrap: wrap;
-      gap: 10px;
+      gap: 12px;
       justify-content: center;
-      margin-top: 20px;
+      margin-top: 25px;
     }
 
     .nav-btn {
       font-family: 'Press Start 2P', cursive;
-      font-size: 10px;
+      font-size: 11px;
       color: var(--border-black);
       background-color: var(--accent-yellow);
-      padding: 8px 12px;
+      padding: 10px 16px;
       text-decoration: none;
       border: 3px solid var(--border-black);
-      box-shadow: 3px 3px 0px 0px var(--border-black);
+      box-shadow: 4px 4px 0px 0px var(--border-black);
     }
 
     .nav-btn.profile-btn {
@@ -91,50 +94,45 @@
 
     .nav-btn:hover {
       transform: translate(2px, 2px);
-      box-shadow: 1px 1px 0px 0px var(--border-black);
+      box-shadow: 2px 2px 0px 0px var(--border-black);
     }
 
-    /* Grid y Contenedores */
+    /* Main Container */
     .projects-container {
-      max-width: 900px;
       width: 100%;
+      max-width: 1400px;
       display: flex;
       flex-direction: column;
       gap: 40px;
     }
 
-    /* Tarjeta de Ficha de Personaje / About Me */
+    /* About Me Player Select Card */
     .about-card {
       background-color: var(--card-bg);
       border: 4px solid var(--border-black);
       box-shadow: 8px 8px 0px 0px var(--accent-cyan);
-      padding: 25px;
+      padding: 30px;
+      width: 100%;
     }
 
     .about-grid {
       display: grid;
-      grid-template-columns: 220px 1fr;
-      gap: 25px;
+      grid-template-columns: 280px 1fr;
+      gap: 30px;
       align-items: start;
-    }
-
-    @media (max-width: 768px) {
-      .about-grid {
-        grid-template-columns: 1fr;
-      }
     }
 
     .avatar-frame {
       border: 3px solid var(--border-black);
       box-shadow: 4px 4px 0px 0px var(--accent-purple);
       background-color: #000;
-      padding: 5px;
+      padding: 6px;
       text-align: center;
     }
 
     .avatar-frame img {
       width: 100%;
-      height: 220px;
+      height: 260px;
       object-fit: cover;
       display: block;
     }
@@ -144,49 +142,44 @@
       border: 2px dashed var(--accent-purple);
       padding: 12px;
       margin-top: 15px;
-      font-size: 18px;
+      font-size: 20px;
     }
 
     .stats-box span {
       color: var(--accent-green);
     }
 
-    /* Tarjetas de Proyectos */
+    /* Project Level Cards */
     .project-card {
       background-color: var(--card-bg);
       border: 4px solid var(--border-black);
       box-shadow: 8px 8px 0px 0px var(--accent-pink);
-      padding: 25px;
+      padding: 30px;
+      width: 100%;
     }
 
-    .section-title {
+    .section-title, .project-title {
       font-family: 'Press Start 2P', cursive;
-      font-size: 15px;
+      font-size: 16px;
       color: var(--accent-yellow);
       text-shadow: 2px 2px 0px var(--border-black);
       margin-top: 0;
       border-bottom: 3px dashed var(--accent-purple);
-      padding-bottom: 10px;
+      padding-bottom: 12px;
     }
 
     .media-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 20px;
-      margin: 20px 0;
-    }
-
-    @media (max-width: 768px) {
-      .media-grid {
-        grid-template-columns: 1fr;
-      }
+      gap: 25px;
+      margin: 25px 0;
     }
 
     .pixel-frame {
       border: 3px solid var(--border-black);
       box-shadow: 4px 4px 0px 0px var(--accent-green);
       background-color: #000;
-      padding: 5px;
+      padding: 6px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -194,7 +187,7 @@
 
     .pixel-frame img {
       width: 100%;
-      height: 240px;
+      height: 340px;
       object-fit: cover;
       display: block;
     }
@@ -219,10 +212,10 @@
 
     .description-title, .articles-title {
       font-family: 'Press Start 2P', cursive;
-      font-size: 11px;
+      font-size: 12px;
       color: var(--accent-green);
-      margin-top: 20px;
-      margin-bottom: 5px;
+      margin-top: 25px;
+      margin-bottom: 8px;
     }
 
     .articles-list {
@@ -232,9 +225,9 @@
     }
 
     .articles-list li {
-      margin-bottom: 8px;
+      margin-bottom: 10px;
       position: relative;
-      padding-left: 20px;
+      padding-left: 22px;
     }
 
     .articles-list li::before {
@@ -256,18 +249,32 @@
 
     .social-links {
       display: flex;
-      gap: 15px;
+      gap: 20px;
       flex-wrap: wrap;
       margin-top: 15px;
+    }
+
+    @media (max-width: 900px) {
+      body {
+        padding: 15px;
+      }
+
+      .about-grid, .media-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .pixel-frame img {
+        height: 240px;
+      }
     }
   </style>
 </head>
 <body>
 
-  <!-- Encabezado Principal -->
+  <!-- Main Header -->
   <header class="header-box">
     <h1>SERIOUS GAMES RESEARCH LAB</h1>
-    <p class="subtitle">> Tech Divulgation & Motor-Cognitive Projects</p>
+    <p class="subtitle">> Tech Science & Motor-Cognitive Systems</p>
     
     <nav class="nav-projects">
       <a href="#about-me" class="nav-btn profile-btn">PLAYER PROFILE</a>
@@ -276,175 +283,220 @@
       <a href="#proj-3" class="nav-btn">PROJECT 03</a>
       <a href="#proj-4" class="nav-btn">PROJECT 04</a>
       <a href="#proj-5" class="nav-btn">PROJECT 05</a>
+      <a href="#proj-6" class="nav-btn">PROJECT 06</a>
     </nav>
   </header>
 
   <main class="projects-container">
 
-    <!-- SECCIÓN ABOUT ME (Ficha de Personaje) -->
+    <!-- ABOUT ME SECTION -->
     <section id="about-me" class="about-card">
       <h2 class="section-title" style="color: var(--accent-cyan);">PLAYER SELECT: ABOUT ME</h2>
       
       <div class="about-grid">
-        <!-- Foto / Avatar Pixel Art -->
         <div class="avatar-frame">
           <img src="foto-perfil.png" alt="Meilen Salamanca Profile">
           
           <div class="stats-box">
             <div>CLASS: <span>Bioengineer</span></div>
-            <div>ROLE: <span>Researcher / PhD</span></div>
+            <div>ROLE: <span>PhD Researcher</span></div>
             <div>SPEC: <span>Serious Games & HCI</span></div>
           </div>
         </div>
 
-        <!-- Biografía / Resumen de Investigación -->
         <div>
-          <div class="description-title">> RESEARCH SUMMARY</div>
+          <div class="description-title">> RESEARCH OVERVIEW</div>
           <p>
-            ¡Hola! Soy <strong>Meilen Salamanca</strong>, Bioingeniera e Investigadora especializada en 
-            <strong>Engenharia de Reabilitação, Serious Games y Human-Computer Interaction (HCI)</strong>.
+            Welcome! I am <strong>Meilen Salamanca</strong>, a Bioengineer and Researcher specialized in 
+            <strong>Rehabilitation Engineering, Serious Games, and Human-Computer Interaction (HCI)</strong>.
           </p>
           <p>
-            Mi trabajo se enfoca en el desarrollo y evaluación de entornos virtuales adaptativos, interfaces motor-cognitivas (VR, treadmills, sensores de movimiento) y arquitecturas de Ajuste Dinámico de Dificultad (DDA) orientadas a la rehabilitación y salud digital de adultos mayores.
-          </p>
-
-          <div class="description-title">> SKILLS & INVENTORY</div>
-          <p>
-            • <strong>Tech:</strong> C++, Unity (C#), OpenGL, ROS2, Python (Pandas, OpenCV, MediaPipe)<br>
-            • <strong>Hardware:</strong> Kinect V2, SmartTreadmills, Virtual Reality (Stereoscopic/Headsets), Haptic Gloves
+            My research focuses on designing adaptive virtual environments, motor-cognitive interfaces (stereoscopic systems, treadmills, sensors), and Dynamic Difficulty Adjustment (DDA) architectures tailored for neurorehabilitation, cognitive assessment, and healthy aging.
           </p>
 
-          <div class="description-title">> CONNECT / EXTERNAL LINKS</div>
+          <div class="description-title">> TECH INVENTORY</div>
+          <p>
+            • <strong>Software & Engines:</strong> C++, Unity (C#), OpenGL, ROS/ROS2, Python (Pandas, MediaPipe, OpenCV)<br>
+            • <strong>Hardware & Sensing:</strong> Meta Quest 3, SenseGlove Nova 2, Kinect V2, SmartTreadmills, Stereoscopic Projection Systems
+          </p>
+
+          <div class="description-title">> CONNECT / LINKS</div>
           <div class="social-links">
-            <a href="https://github.com/mei-salamanca" target="_blank">[GitHub]</a>
-            <a href="https://orcid.org/" target="_blank">[ORCID]</a>
-            <a href="https://lattes.cnpq.br/" target="_blank">[Currículo Lattes]</a>
-            <a href="mailto:tu-email@dominio.com">[Contact Email]</a>
+            <a href="https://github.com/mei-salamanca" target="_blank">[GitHub Profile]</a>
+            <a href="https://orcid.org/" target="_blank">[ORCID iD]</a>
+            <a href="https://lattes.cnpq.br/" target="_blank">[Lattes Curriculum]</a>
+            <a href="mailto:your-email@domain.com">[Contact Email]</a>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- PROYECTO 1 -->
+    <!-- PROJECT 1 -->
     <section id="proj-1" class="project-card">
-      <h2 class="project-title">LEVEL 01: Adaptive Dual-Task Exergame</h2>
+      <h2 class="project-title">LEVEL 01: Early Mobilization Therapy Support in ICU (Undergraduate Thesis)</h2>
       
       <div class="media-grid">
         <div class="pixel-frame">
-          <img src="proyecto1.png" alt="Vista previa del Proyecto 1">
+          <img src="proyecto1.png" alt="Early Mobilization ICU Project Image">
         </div>
         <div class="pixel-frame">
           <div class="video-container">
-            <iframe src="https://www.youtube.com/embed/VIDEO_ID_AQUI" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/VIDEO_ID_HERE" allowfullscreen></iframe>
           </div>
         </div>
       </div>
 
       <div class="description-title">> MISSION BRIEF / DESCRIPTION</div>
-      <p>Diseño y evaluación de un Serious Game adaptativo para entrenamiento dual-task motor-cognitivo utilizando Kinect V2 y UFES SmartTreadmill. Integra arquitectura de ajuste dinámico de dificultad (DDA).</p>
+      <p>Undergraduate thesis focused on the development of technological solutions and interactive support tools for early mobilization physical therapy in Intensive Care Unit (ICU) environments.</p>
 
       <div class="articles-title">> RELATED PUBLICATIONS</div>
       <ul class="articles-list">
-        <li><strong>Salamanca et al. (2026).</strong> "Adaptive Serious Game Design for Motor-Cognitive Training in Older Adults". <a href="#" target="_blank">[PDF / DOI]</a></li>
+        <li><strong>Salamanca M. et al.</strong> "Undergraduate Thesis - Early Mobilization Therapy Support Systems in Intensive Care Units." <a href="#" target="_blank">[PDF / DOI Link]</a></li>
       </ul>
     </section>
 
-    <!-- PROYECTO 2 -->
+    <!-- PROJECT 2 -->
     <section id="proj-2" class="project-card">
-      <h2 class="project-title">LEVEL 02: Dynamic Difficulty Adjustment System</h2>
+      <h2 class="project-title">LEVEL 02: Stereoscopic Projection System Development</h2>
       
       <div class="media-grid">
         <div class="pixel-frame">
-          <img src="proyecto2.png" alt="Vista previa del Proyecto 2">
+          <img src="proyecto2.png" alt="Stereoscopic Projection System Image">
         </div>
         <div class="pixel-frame">
           <div class="video-container">
-            <iframe src="https://www.youtube.com/embed/VIDEO_ID_AQUI" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/VIDEO_ID_HERE" allowfullscreen></iframe>
           </div>
         </div>
       </div>
 
       <div class="description-title">> MISSION BRIEF / DESCRIPTION</div>
-      <p>Breve descripción del segundo proyecto (métricas en tiempo real, tolerancia fisiológica, control de frecuencia cardíaca o rendimiento cognitivo).</p>
+      <p>Design, calibration, and architectural implementation of an immersive stereoscopic projection system for interactive virtual environments and immersive experimental protocols.</p>
 
       <div class="articles-title">> RELATED PUBLICATIONS</div>
       <ul class="articles-list">
-        <li><strong>Salamanca et al.</strong> "Multi-channel DDA Architecture for Serious Games". <a href="#" target="_blank">[PDF / DOI]</a></li>
+        <li><strong>Salamanca M. et al.</strong> "Development and Calibration of Low-Cost Stereoscopic Projection Systems for Immersive Applications." <a href="#" target="_blank">[PDF / DOI Link]</a></li>
       </ul>
     </section>
 
-    <!-- PROYECTO 3 -->
+    <!-- PROJECT 3 -->
     <section id="proj-3" class="project-card">
-      <h2 class="project-title">LEVEL 03: VR & Haptic Interface Integration</h2>
+      <h2 class="project-title">LEVEL 03: Motor-Cognitive Training for Older Adults</h2>
       
       <div class="media-grid">
         <div class="pixel-frame">
-          <img src="proyecto3.png" alt="Vista previa del Proyecto 3">
+          <img src="proyecto3.png" alt="Motor-Cognitive Training Image">
         </div>
         <div class="pixel-frame">
           <div class="video-container">
-            <iframe src="https://www.youtube.com/embed/VIDEO_ID_AQUI" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/VIDEO_ID_HERE" allowfullscreen></iframe>
           </div>
         </div>
       </div>
 
       <div class="description-title">> MISSION BRIEF / DESCRIPTION</div>
-      <p>Breve descripción del tercer proyecto enfocado en la integración de realidad virtual estereoscópica o guantes hápticos.</p>
+      <p>Adaptive Serious Game integrating multi-channel Dynamic Difficulty Adjustment (DDA), body-based interaction (Kinect V2 and SmartTreadmill), and longitudinal 36-session dual-task protocols for older adults.</p>
 
       <div class="articles-title">> RELATED PUBLICATIONS</div>
       <ul class="articles-list">
-        <li><strong>Salamanca et al.</strong> "Immersive Haptic Feedback in VR Rehabilitation". <a href="#" target="_blank">[PDF / DOI]</a></li>
+        <li><strong>Salamanca M. et al. (2026).</strong> "Adaptive Serious Game Design for Motor-Cognitive Training in Older Adults: System Architecture and Therapeutic Protocol." <a href="#" target="_blank">[PDF / DOI Link]</a></li>
       </ul>
     </section>
 
-    <!-- PROYECTO 4 -->
+    <!-- PROJECT 4 -->
     <section id="proj-4" class="project-card">
-      <h2 class="project-title">LEVEL 04: Gait & Kinematic Analysis</h2>
+      <h2 class="project-title">LEVEL 04: Market-Rehab</h2>
       
       <div class="media-grid">
         <div class="pixel-frame">
-          <img src="proyecto4.png" alt="Vista previa del Proyecto 4">
+          <img src="proyecto4.png" alt="Market-Rehab Project Image">
         </div>
         <div class="pixel-frame">
           <div class="video-container">
-            <iframe src="https://www.youtube.com/embed/VIDEO_ID_AQUI" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/VIDEO_ID_HERE" allowfullscreen></iframe>
           </div>
         </div>
       </div>
 
       <div class="description-title">> MISSION BRIEF / DESCRIPTION</div>
-      <p>Breve descripción del cuarto proyecto enfocado en la velocidad de marcha, trayectorias y análisis biomecánico.</p>
+      <p>A virtual market exergame designed for ecological functional rehabilitation, combining executive function cognitive tasks with upper and lower limb motor control.</p>
 
       <div class="articles-title">> RELATED PUBLICATIONS</div>
       <ul class="articles-list">
-        <li><strong>Salamanca et al.</strong> "Kinematic Variations in Self-Paced Smart Treadmill Systems". <a href="#" target="_blank">[PDF / DOI]</a></li>
+        <li><strong>Salamanca M. et al.</strong> "Market-Rehab: Ecological Virtual Reality Protocols for Executive Function and Motor Rehabilitation." <a href="#" target="_blank">[PDF / DOI Link]</a></li>
       </ul>
     </section>
 
-    <!-- PROYECTO 5 -->
+    <!-- PROJECT 5 -->
     <section id="proj-5" class="project-card">
-      <h2 class="project-title">LEVEL 05: 2D Robot Kinematics Simulator</h2>
+      <h2 class="project-title">LEVEL 05: Haptic Gloves & VR Car Driving Simulator</h2>
       
       <div class="media-grid">
         <div class="pixel-frame">
-          <img src="proyecto5.png" alt="Vista previa del Proyecto 5">
+          <img src="proyecto5.png" alt="Haptic Gloves VR Driving Image">
         </div>
         <div class="pixel-frame">
           <div class="video-container">
-            <iframe src="https://www.youtube.com/embed/VIDEO_ID_AQUI" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/VIDEO_ID_HERE" allowfullscreen></iframe>
           </div>
         </div>
       </div>
 
       <div class="description-title">> MISSION BRIEF / DESCRIPTION</div>
-      <p>Breve descripción del quinto proyecto (simulación en OpenGL/C++, cinemática de robots y algoritmos de colisión).</p>
+      <p>Integration of force-feedback haptic gloves (SenseGlove) with immersive Virtual Reality for simulated car driving protocols, haptic rendering, and fine-motor control assessment.</p>
 
       <div class="articles-title">> RELATED PUBLICATIONS</div>
       <ul class="articles-list">
-        <li><strong>Salamanca et al.</strong> "2D Kinematic Simulation Engine in C++". <a href="#" target="_blank">[PDF / DOI]</a></li>
+        <li><strong>Salamanca M. et al.</strong> "Haptic Rendering and Driving Simulation in VR via Force-Feedback Gloves." <a href="#" target="_blank">[PDF / DOI Link]</a></li>
       </ul>
     </section>
 
+    <!-- PROJECT 6 -->
+    <section id="proj-6" class="project-card">
+      <h2 class="project-title">LEVEL 06: Attentive & Distracted: VR Tool for ADHD Assessment in Adults</h2>
+      
+      <div class="media-grid">
+        <div class="pixel-frame">
+          <img src="proyecto6.png" alt="VR ADHD Assessment Image">
+        </div>
+        <div class="pixel-frame">
+          <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/VIDEO_ID_HERE" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+
+      <div class="description-title">> MISSION BRIEF / DESCRIPTION</div>
+      <p>Virtual Reality diagnostic and evaluation environment developed for quantitative assessment of Attention-Deficit/Hyperactivity Disorder (ADHD) metrics in adult populations.</p>
+
+      <div class="articles-title">> RELATED PUBLICATIONS</div>
+      <ul class="articles-list">
+        <li><strong>Salamanca M. et al.</strong> "Attentive & Distracted: Virtual Reality Framework for Adult ADHD Assessment." <a href="#" target="_blank">[PDF / DOI Link]</a></li>
+      </ul>
+    </section>
+<!-- PROJECT 7 -->
+    <section id="proj-7" class="project-card">
+      <h2 class="project-title">LEVEL 07: Framework for Serious Game Development and Analysis</h2>
+      
+      <div class="media-grid">
+        <div class="pixel-frame">
+          <img src="proyecto6.png" alt="VR ADHD Assessment Image">
+        </div>
+        <div class="pixel-frame">
+          <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/VIDEO_ID_HERE" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+
+      <div class="description-title">> MISSION BRIEF / DESCRIPTION</div>
+      <p>Frameworks.</p>
+
+      <div class="articles-title">> RELATED PUBLICATIONS</div>
+      <ul class="articles-list">
+        <li><strong>Salamanca M. et al.</strong> "Frameworks." <a href="#" target="_blank">[PDF / DOI Link]</a></li>
+      </ul>
+    </section>
   </main>
 
 </body>
